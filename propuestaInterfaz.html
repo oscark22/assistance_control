@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Jurados</title>
+	<meta charset="utf-8">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+
+</head>
+
+<body>
+
+	
+<br>
+	
+<div class="container">
+
+
+	<br>
+	<br>
+	<div class="row"> 
+	<div class="col-10">
+		<h2>JURADOS</h2>
+	</div>
+
+	<div class="col-2">
+        <!-- Button trigger modal -->
+		<button type="button" class="btn btn-success"  href="#ventana1" class="btn btn-primary" data-toggle="modal"><i class="far fa-plus-square"></i>&nbsp;AGREGAR</button>
+		
+	</div>
+</div>
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Proyecto</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td><i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-search"></i>
+            	<i class="fas fa-trash-alt"></i></td>
+                
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td><i class="fas fa-pencil-alt"></i>
+                	<i class="fas fa-search"></i>
+            		<i class="fas fa-trash-alt"></i></td>
+               
+            </tr>
+            <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td><i class="fas fa-pencil-alt" ></i>
+                <i class="fas fa-search"></i>
+            	<i class="fas fa-trash-alt"></i></td>
+                
+            </tr>
+            <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td><i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-search"></i>
+            	<i class="fas fa-trash-alt"></i></td>
+                
+           
+            <tr>
+                <td>Gloria Little</td>
+                <td>Systems Administrator</td>
+                <td><i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-search"></i>
+            	<i class="fas fa-trash-alt"></i></td>
+             
+            </tr>
+            <tr>
+                <td>Bradley Greer</td>
+                <td>Software Engineer</td>
+                <td><i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-search"></i>
+           	    <i class="fas fa-trash-alt"></i></td>
+                
+            </tr>
+            <tr>
+                <td>Dai Rios</td>
+                <td>Personnel Lead</td>
+               <td><i class="fas fa-pencil-alt"></i>
+               <i class="fas fa-search"></i>
+           	   <i class="fas fa-trash-alt"></i></td>
+              
+            </tr>
+            <tr>
+                <td>Jenette Caldwell</td>
+                <td>Development Lead</td>
+                <td><i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-search"></i>
+            	<i class="fas fa-trash-alt"></i></td>
+           
+            </tr>
+            <tr>
+                <td>Yuri Berry</td>
+                <td>Chief Marketing Officer (CMO)</td>
+                <td><i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-search"></i>
+            	<i class="fas fa-trash-alt"></i></td>
+               
+            </tr>
+            
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                 <th>Nombre</th>
+                <th>Proyecto</th>
+                <th>Acciones</th>
+               
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+
+
+
+<!-- Modal --><!-- Modal --><!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="ventana1" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">ALTA DE JURADOS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <p>&nbsp;Para asignar un jurado ,seleccione el nombre del jurado y elija por lo menos un proyecyo del listado</p>
+      <div class="modal-body">
+
+
+
+        <div class="container">
+    <br>
+    <br>
+    <div class="row"> 
+        <div class="col-4">NOMBRE:</div>
+        <div class="col-4">
+            <form>
+                  <div class="form-group">
+                    <select id="selecName" class="form-control form-control-lg" readonly>
+                       
+                          
+                        
+                    </select>
+                  </div>
+                  <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"> <i class="fas fa-search"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="form-group">
+                <select multiple class="form-control"id="SelecUsuario" onchange="cantproyc(this.value)"  >
+                  <option value="2">Yael</option>
+                  <option value="6">Ivan</option>
+                  <option value="4">Tomas</option>
+                  <option value="3">Matias</option>
+                </select>
+              </div>
+
+        </form>
+        </div>
+        <div class="col-3">
+            <label for="exampleFormControlInput1">CANTIDAD DE PROYECTOS ASIGNADOS:</label>
+            </div>
+                
+           <div class="col-1">   
+           <div class="form-group">  
+            <input type="email" class="form-control" id="CandProyectos" readonly>
+              </div>
+        </div>
+    </div>
+<table id="example2" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Proyecto</th>
+                <th>Categoria</th>
+                <th>Unidad Academica</th>
+                <th>Agregar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>CETYS</td>
+                <td>
+                    <div class="margin-l-15 checkbox checkboxStyle-table checkColorGreenLight">
+            <input type="checkbox" class="tableid" value="1" id="asig1" class="click"  onchange="valor(this.value)">
+            <label class="s18 text-normal"></label>
+          </div>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Antonella</td>
+                <td>App</td>
+                <td>CETYS</td>
+                <td>   <div class="margin-l-15 checkbox checkboxStyle-table checkColorGreenLight">
+            <input type="checkbox" class="tableid" value="1" id="asig2" class="click" onchange="valor(this.value)">
+            <label class="s18 text-normal"></label>
+          </div></i></td>
+                
+               
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Face</td>
+                <td>Web</td>
+                <td>CETYS</td>
+                <td>   <div class="margin-l-15 checkbox checkboxStyle-table checkColorGreenLight">
+            <input type="checkbox" class="tableid" value="1" id="asig3" class="click" onchange="valor(this.value)">
+            <label class="s18 text-normal"></label>
+          </div></td>
+                
+                
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Media</td>
+                <td>Old</td>
+                <td>CETYS</td>
+                <td>   <div class="margin-l-15 checkbox checkboxStyle-table checkColorGreenLight">
+            <input type="checkbox" class="tableid" value="1" id="asig4" class="click" onchange="valor(this.value)">
+            <label class="s18 text-normal"></label>
+          </div></td>
+                
+                
+           
+            <tr>
+                <td>5</td>
+                <td>Rout</td>
+                <td>New</td>
+                <td>CETYS</td>
+                <td>   <div class="margin-l-15 checkbox checkboxStyle-table checkColorGreenLight">
+            <input type="checkbox" class="tableid" value="1" id="asig5" class="click" onchange="valor(this.value)">
+            <label class="s18 text-normal"></label>
+          </div></td>
+                
+             
+            </tr>
+            
+            
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>#</th>
+                <th>Proyecto</th>
+                <th>Categoria</th>
+                <th>Unidad Academica</th>
+                <th>Agregar</th>
+            </tr>
+               
+            </tr>
+        </tfoot>
+    </table>
+         
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="btn1">GUARDAR</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+
+<!-- Modal -->
+
+
+
+
+</body>
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+
+<script type="text/javascript" >
+	
+$(document).ready(function() {
+	$('#example').DataTable({"lengthMenu": [[3, 4, 5, -1], [3, 4, 5, "All"]]});
+
+} );
+
+	</script>
+       <script type="text/javascript">
+    
+$(document).ready(function() {
+    $('#example2').DataTable();
+
+} );
+
+    </script>
+
+    <script type="text/javascript">
+        var nombre="";
+        function cantproyc(cand){
+        
+        $("#CandProyectos").val(cand);
+        $("#selecName").empty();
+        if(cand==2){
+         nombre="<option>Yael</option>";
+    }
+       if(cand==6){
+         nombre="<option>Ivan</option>";
+    }
+       if(cand==4){
+         nombre="<option>Tomas</option>";
+    }
+       if(cand==3){
+         nombre="<option>Matias</option>";
+    }
+
+        $("#selecName").append(
+            nombre
+
+            );
+
+        }
+       function valor(np)
+        {       
+        var numerodProyectos=0;
+        var p1,p2,p3,p4,p5;
+        var datos = document.getElementById('SelecUsuario').value;
+        //var datos1 = document.getElementById('asig1').value
+
+       
+
+        var isChecked = document.getElementById('asig1').checked;
+        var isChecked2 = document.getElementById('asig2').checked;
+        var isChecked3 = document.getElementById('asig3').checked;
+        var isChecked4 = document.getElementById('asig4').checked;
+        var isChecked5 = document.getElementById('asig5').checked;
+
+        if(isChecked){
+            numerodProyectos++;
+        }
+        if(isChecked2){
+            numerodProyectos++;
+        }
+        if(isChecked3){
+            numerodProyectos++;
+        }
+        if(isChecked4){
+            numerodProyectos++;
+        }
+        if(isChecked5){
+            numerodProyectos++;
+        }
+        //var n2 = datos1.substring(0, datos.length);
+        //var enc = datos.indexOf('√');
+        var n1 = datos.substring(0, datos.length);
+
+        var res = Number(n1)+numerodProyectos;
+        
+        if(res>6){
+
+          if(isChecked){
+            document.getElementById("asig1").checked = false;
+            alert("No puedes agreagar mas de 6 proyectos");
+        }
+        if(isChecked2){
+            document.getElementById("asig2").checked = false;
+           alert("No puedes agreagar mas de 6 proyectos");
+            
+        }
+        if(isChecked3){
+            document.getElementById("asig3").checked = false;
+            alert("No puedes agreagar mas de 6 proyectos");
+            
+        }
+        if(isChecked4){
+            document.getElementById("asig4").checked = false;
+            alert("No puedes agreagar mas de 6 proyectos");
+            
+        }
+        if(isChecked5){
+            document.getElementById("asig5").checked = false;
+            alert("No puedes agreagar mas de 6 proyectos");
+        }
+    
+   
+        
+    }
+}
+    </script>
+
+<script type="text/javascript">
+   $("#btn1").click(function(){
+    Swal.fire({
+  title: 'Estas seguro que quieres guardar?',
+  text: "Los cambios seran guardados!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Guardar'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Guardado!',
+      'Se ha guardado correctamente',
+      'success'
+    )
+  }
+});
+});
+    
+</script>
+
+</html>
+
+
+
+}
