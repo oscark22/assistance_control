@@ -26,7 +26,7 @@
 
 	<div class="col-2">
         <!-- Button trigger modal -->
-		<button type="button" class="btn btn-success"  href="#ventana1" class="btn btn-primary" data-toggle="modal"><i class="far fa-plus-square"></i>&nbsp;AGREGAR</button>
+		<button type="button" class="btn btn-success"  href="#ventana-eliminar" class="btn btn-primary" data-toggle="modal"><i class="far fa-plus-square"></i>&nbsp;AGREGAR</button>
 		
 	</div>
 </div>
@@ -40,77 +40,93 @@
         </thead>
         <tbody>
             <tr id="tr1">
-                <td id="td1">Tiger Nixon</td>
-                <td id="td2">System Architect</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
                 <td>
-                  <a id="myLink1" href="./editar.html"><i class="fas fa-pencil-alt"></i></a>
-                  <a id="myLink2" href="#" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></a>
-                  <a id="myLink3" href="#"><i class="fas fa-trash-alt"></i></a>
+                  <button onclick="update_el('Tiger Nixon', 'System Architect')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="show_el('Tiger Nixon', 'System Architect')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
+                  <button onclick="delete_el('tr1')"><i class="fas fa-trash-alt"></i></button>
                 </td>
                 
             </tr>
-            <tr>
+            <tr id="tr2">
                 <td>Garrett Winters</td>
                 <td>Accountant</td>
-                <td><i class="fas fa-pencil-alt"></i>
-                	<i class="fas fa-search"></i>
-            		<i class="fas fa-trash-alt"></i></td>
+                <td>
+                  <button onclick="update_el('Garrett Winters', 'Accountant')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="show_el('Garrett Winters', 'Accountant')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
+                  <button onclick="delete_el('tr2')"><i class="fas fa-trash-alt"></i></button>
+                </td>
                
             </tr>
-            <tr>
+            <tr id="tr3">
                 <td>Ashton Cox</td>
                 <td>Junior Technical Author</td>
-                <td><i class="fas fa-pencil-alt" ></i>
-                <i class="fas fa-search"></i>
-            	<i class="fas fa-trash-alt"></i></td>
+                <td>
+                  <button onclick="update_el('Ashton Cox', 'Junior Technical Author')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="show_el('Ashton Cox', 'Junior Technical Author')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
+                  <button onclick="delete_el('tr3')"><i class="fas fa-trash-alt"></i></button>
+                </td>
                 
             </tr>
-            <tr>
+            <tr id="tr4">
                 <td>Cedric Kelly</td>
                 <td>Senior Javascript Developer</td>
-                <td><i class="fas fa-pencil-alt"></i>
-                <i class="fas fa-search"></i>
-            	<i class="fas fa-trash-alt"></i></td>
+                <td>
+                  <button onclick="update_el('Cedric Kelly', 'Senior Javascript Developer')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="show_el('Cedric Kelly', 'Senior Javascript Developer')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
+                  <button onclick="delete_el('tr4')"><i class="fas fa-trash-alt"></i></button>
+                </td>
                 
            
-            <tr>
+            <tr id="tr5">
                 <td>Gloria Little</td>
                 <td>Systems Administrator</td>
-                <td><i class="fas fa-pencil-alt"></i>
-                <i class="fas fa-search"></i>
-            	<i class="fas fa-trash-alt"></i></td>
+                <td>
+                  <button onclick="update_el('Gloria Little', 'Systems Administrator')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="show_el('Gloria Little', 'Systems Administrator')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
+                  <button onclick="delete_el('tr5')"><i class="fas fa-trash-alt"></i></button>
+                </td>
              
             </tr>
-            <tr>
+            <tr id="tr6">
                 <td>Bradley Greer</td>
                 <td>Software Engineer</td>
-                <td><i class="fas fa-pencil-alt"></i>
-                <i class="fas fa-search"></i>
-           	    <i class="fas fa-trash-alt"></i></td>
+                <td>
+                  <button onclick="update_el('Bradley Greer', 'Software Engineer')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="show_el('Bradley Greer', 'Software Engineer')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
+                  <button onclick="delete_el('tr6')"><i class="fas fa-trash-alt"></i></button>
+                </td>
                 
             </tr>
-            <tr>
+            <tr id="tr7">
                 <td>Dai Rios</td>
                 <td>Personnel Lead</td>
-               <td><i class="fas fa-pencil-alt"></i>
-               <i class="fas fa-search"></i>
-           	   <i class="fas fa-trash-alt"></i></td>
+                <td>
+                  <button onclick="update_el('Dai Rios', 'Personnel Lead')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="show_el('Dai Rios', 'Personnel Lead')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
+                  <button onclick="delete_el('tr7')"><i class="fas fa-trash-alt"></i></button>
+                </td>
               
             </tr>
-            <tr>
+            <tr id="tr8">
                 <td>Jenette Caldwell</td>
                 <td>Development Lead</td>
-                <td><i class="fas fa-pencil-alt"></i>
-                <i class="fas fa-search"></i>
-            	<i class="fas fa-trash-alt"></i></td>
+                <td>
+                  <button onclick="update_el('Jenette Caldwell', 'Development Lead')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="show_el('Jenette Caldwell', 'Development Lead')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
+                  <button onclick="delete_el('tr8')"><i class="fas fa-trash-alt"></i></button>
+                </td>
            
             </tr>
-            <tr>
+            <tr id="tr9">
                 <td>Yuri Berry</td>
                 <td>Chief Marketing Officer (CMO)</td>
-                <td><i class="fas fa-pencil-alt"></i>
-                <i class="fas fa-search"></i>
-            	<i class="fas fa-trash-alt"></i></td>
+                <td>
+                  <button onclick="update_el('Yuri Berry', 'Chief Marketing Officer (CMO)')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="show_el('Yuri Berry', 'Chief Marketing Officer (CMO)')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
+                  <button onclick="delete_el('tr9')"><i class="fas fa-trash-alt"></i></button>
+                </td>
                
             </tr>
             
@@ -130,9 +146,69 @@
 
 
 
+<!-- Update -->
+<div class="modal fade" id="ventana-modificar" tabindex="-1" role="dialog" aria-labelledby="show-title" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-update-show-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-column p-4">
+          <form class="mb-5">
+            <div class="form-group">
+              <label for="send-name">Editar el nombre:</label>
+              <input type="text" id="modal-update-send-name" class="form-control" placeholder="Nuevo nombre" required />
+            </div>
+            <button class="btn btn-primary btn-sm">Enviar nombre</button>
+          </form>
+          <form>
+            <div class="form-group">
+              <label for="send-project">Editar el proyecto:</label>
+              <input type="text" id="modal-update-send-project" class="form-control" placeholder="Nuevo proyecto" required />
+            </div>
+            <button class="btn btn-primary btn-sm">Enviar proyecto</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- Modal --><!-- Modal --><!-- Modal -->
-<div class="modal fade bd-example-modal-lg" id="ventana1" tabindex="-1" role="dialog">
+<!-- Read -->
+<div class="modal fade" id="ventana-ver" tabindex="-1" role="dialog" aria-labelledby="show-title" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-read-show-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          <b>Nombre: </b>
+          <span id="modal-read-show-name"></span>
+          <br />
+          <b>Proyecto: </b>
+          <span id="modal-read-show-project"></span>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add (+) -->
+<div class="modal fade bd-example-modal-lg" id="ventana-eliminar" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -287,32 +363,6 @@
 </div>  
 
 
-<!-- Modal -->
-<div class="modal fade" id="ventana-ver" tabindex="-1" role="dialog" aria-labelledby="show-title" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="show-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>
-          <b>Nombre: </b>
-          <span id="show-name"></span>
-          <br />
-          <b>Proyecto: </b>
-          <span id="show-project"></span>
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-
-
 
 </body>
 
@@ -456,23 +506,23 @@ $(document).ready(function() {
 });
 </script>
 
-<script>
-  document.getElementById("myLink2").onclick = function() {
-    let name = document.getElementById("td1");
-    let project = document.getElementById("td2");
-    document.getElementById("show-title").innerHTML = name.innerText || name.textContent;
-    document.getElementById("show-name").innerHTML = name.innerText || name.textContent;
-    document.getElementById("show-project").innerHTML = project.innerText || project.textContent;
+<script type="text/javascript">
+  function update_el(name, project) {
+    document.getElementById("modal-update-show-title").innerHTML = "Modificar";
+    document.getElementById("modal-update-send-name").placeholder = name;
+    document.getElementById("modal-update-send-project").placeholder = project;
   }
 
-  document.getElementById("myLink3").onclick = function() {
-    document.getElementById("tr1").remove();
+  function show_el(name, project) {
+    document.getElementById("modal-read-show-title").innerHTML = "Información";
+    document.getElementById("modal-read-show-name").innerHTML = name;
+    document.getElementById("modal-read-show-project").innerHTML = project;
+  }
+
+  function delete_el(id) {
+    document.getElementById(id).remove();
   }
 
 </script>
 
 </html>
-
-
-
-}
