@@ -3,10 +3,10 @@
 <head>
 	<title>Jurados</title>
 	<meta charset="utf-8">
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
 </head>
 
 <body>
@@ -39,12 +39,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td><i class="fas fa-pencil-alt"></i>
-                <i class="fas fa-search"></i>
-            	<i class="fas fa-trash-alt"></i></td>
+            <tr id="tr1">
+                <td id="td1">Tiger Nixon</td>
+                <td id="td2">System Architect</td>
+                <td>
+                  <a id="myLink1"><i class="fas fa-pencil-alt"></i></a>
+                  <a id="myLink2" href="#" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></a>
+                  <a id="myLink3" href="#"><i class="fas fa-trash-alt"></i></a>
+                </td>
                 
             </tr>
             <tr>
@@ -286,11 +288,34 @@
 
 
 <!-- Modal -->
-
+<div class="modal fade" id="ventana-ver" tabindex="-1" role="dialog" aria-labelledby="show-title" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="show-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          <b>Nombre: </b>
+          <span id="show-name"></span>
+          <br />
+          <b>Proyecto: </b>
+          <span id="show-project"></span>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 
 
 
 </body>
+
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
@@ -429,7 +454,21 @@ $(document).ready(function() {
   }
 });
 });
-    
+</script>
+
+<script>
+  document.getElementById("myLink2").onclick = function() {
+    let name = document.getElementById("td1");
+    let project = document.getElementById("td2");
+    document.getElementById("show-title").innerHTML = name.innerText || name.textContent;
+    document.getElementById("show-name").innerHTML = name.innerText || name.textContent;
+    document.getElementById("show-project").innerHTML = project.innerText || project.textContent;
+  }
+
+  document.getElementById("myLink3").onclick = function() {
+    document.getElementById("tr1").remove();
+  }
+
 </script>
 
 </html>
