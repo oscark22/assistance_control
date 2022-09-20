@@ -4,10 +4,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
 </head>
 
 <body>
-  
+  <div class="d-flex flex-column p-4">
+    <form class="mb-5">
+      <div class="form-group">
+        <label for="send-name">Editar el nombre:</label>
+        <input type="text" id="send-name" class="form-control" placeholder="Nuevo nombre" required />
+      </div>
+      <button class="btn btn-primary btn-sm">Enviar nombre</button>
+    </form>
+    <form>
+      <div class="form-group">
+        <label for="send-project">Editar el proyecto:</label>
+        <input type="text" id="send-project" class="form-control" placeholder="Nuevo proyecto" required />
+      </div>
+      <button class="btn btn-primary btn-sm">Enviar proyecto</button>
+    </form>
+  </div>
 </body>
 
 </html>
