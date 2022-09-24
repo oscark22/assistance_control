@@ -40,40 +40,40 @@
         </thead>
         <tbody>
             <tr id="tr1">
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
+                <td id="name1">Tiger Nixon</td>
+                <td id="project1">System Architect</td>
                 <td>
-                  <button onclick="update_el('Tiger Nixon', 'System Architect')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="update_el('name1', 'project1')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
                   <button onclick="show_el('Tiger Nixon', 'System Architect')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
                   <button onclick="delete_el('tr1')"><i class="fas fa-trash-alt"></i></button>
                 </td>
                 
             </tr>
             <tr id="tr2">
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
+                <td id="name2">Garrett Winters</td>
+                <td id="project2">Accountant</td>
                 <td>
-                  <button onclick="update_el('Garrett Winters', 'Accountant')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="update_el('name2', 'project2')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
                   <button onclick="show_el('Garrett Winters', 'Accountant')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
                   <button onclick="delete_el('tr2')"><i class="fas fa-trash-alt"></i></button>
                 </td>
                
             </tr>
             <tr id="tr3">
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
+                <td id="name3">Ashton Cox</td>
+                <td id="project3">Junior Technical Author</td>
                 <td>
-                  <button onclick="update_el('Ashton Cox', 'Junior Technical Author')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="update_el('name3', 'project3')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
                   <button onclick="show_el('Ashton Cox', 'Junior Technical Author')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
                   <button onclick="delete_el('tr3')"><i class="fas fa-trash-alt"></i></button>
                 </td>
                 
             </tr>
             <tr id="tr4">
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
+                <td id="name4">Cedric Kelly</td>
+                <td id="project4">Senior Javascript Developer</td>
                 <td>
-                  <button onclick="update_el('Cedric Kelly', 'Senior Javascript Developer')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="update_el('name4', 'project4')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
                   <button onclick="show_el('Cedric Kelly', 'Senior Javascript Developer')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
                   <button onclick="delete_el('tr4')"><i class="fas fa-trash-alt"></i></button>
                 </td>
@@ -134,7 +134,7 @@
         </tbody>
         <tfoot>
             <tr>
-                 <th>Nombre</th>
+                <th>Nombre</th>
                 <th>Proyecto</th>
                 <th>Acciones</th>
                
@@ -157,25 +157,21 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="d-flex flex-column p-4">
-          <form class="mb-5">
+        <div class="d-flex flex-column p-4 mb-5">
             <div class="form-group">
               <label for="send-name">Editar el nombre:</label>
               <input type="text" id="modal-update-send-name" class="form-control" placeholder="Nuevo nombre" required />
             </div>
-            <button class="btn btn-primary btn-sm">Enviar nombre</button>
-          </form>
-          <form>
-            <div class="form-group">
+            <button class="btn btn-primary btn-sm" onclick="update_name_btn()">Enviar nombre</button>
+            <div class="form-group mt-5">
               <label for="send-project">Editar el proyecto:</label>
               <input type="text" id="modal-update-send-project" class="form-control" placeholder="Nuevo proyecto" required />
             </div>
-            <button class="btn btn-primary btn-sm">Enviar proyecto</button>
-          </form>
+            <button class="btn btn-primary btn-sm" onclick="update_project_btn()">Enviar proyecto</button>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary id" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -507,10 +503,18 @@ $(document).ready(function() {
 </script>
 
 <script type="text/javascript">
-  function update_el(name, project) {
+  function update_el(name_el_id, project_el_id) {
     document.getElementById("modal-update-show-title").innerHTML = "Modificar";
-    document.getElementById("modal-update-send-name").placeholder = name;
-    document.getElementById("modal-update-send-project").placeholder = project;
+  }
+
+  function update_name_btn() {
+    let name = document.getElementById("modal-update-send-name");
+    document.getElementById("name1").innerHTML = name.value;
+  }
+
+  function update_project_btn() {
+    let project = document.getElementById("modal-update-send-project");
+    document.getElementById("project1").innerHTML = project.value;
   }
 
   function show_el(name, project) {
