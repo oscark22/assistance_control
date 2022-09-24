@@ -80,50 +80,50 @@
                 
            
             <tr id="tr5">
-                <td>Gloria Little</td>
-                <td>Systems Administrator</td>
+                <td id="name5">Gloria Little</td>
+                <td id="project5">Systems Administrator</td>
                 <td>
-                  <button onclick="update_el('Gloria Little', 'Systems Administrator')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="update_el('name5', 'project5')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
                   <button onclick="show_el('Gloria Little', 'Systems Administrator')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
                   <button onclick="delete_el('tr5')"><i class="fas fa-trash-alt"></i></button>
                 </td>
              
             </tr>
             <tr id="tr6">
-                <td>Bradley Greer</td>
-                <td>Software Engineer</td>
+                <td id="name6">Bradley Greer</td>
+                <td id="project6">Software Engineer</td>
                 <td>
-                  <button onclick="update_el('Bradley Greer', 'Software Engineer')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="update_el('name6', 'project6')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
                   <button onclick="show_el('Bradley Greer', 'Software Engineer')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
                   <button onclick="delete_el('tr6')"><i class="fas fa-trash-alt"></i></button>
                 </td>
                 
             </tr>
             <tr id="tr7">
-                <td>Dai Rios</td>
-                <td>Personnel Lead</td>
+                <td id="name7">Dai Rios</td>
+                <td id="project7">Personnel Lead</td>
                 <td>
-                  <button onclick="update_el('Dai Rios', 'Personnel Lead')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="update_el('name7', 'project7')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
                   <button onclick="show_el('Dai Rios', 'Personnel Lead')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
                   <button onclick="delete_el('tr7')"><i class="fas fa-trash-alt"></i></button>
                 </td>
               
             </tr>
             <tr id="tr8">
-                <td>Jenette Caldwell</td>
-                <td>Development Lead</td>
+                <td id="name8">Jenette Caldwell</td>
+                <td id="project8">Development Lead</td>
                 <td>
-                  <button onclick="update_el('Jenette Caldwell', 'Development Lead')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="update_el('name8', 'project8')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
                   <button onclick="show_el('Jenette Caldwell', 'Development Lead')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
                   <button onclick="delete_el('tr8')"><i class="fas fa-trash-alt"></i></button>
                 </td>
            
             </tr>
             <tr id="tr9">
-                <td>Yuri Berry</td>
-                <td>Chief Marketing Officer (CMO)</td>
+                <td id="name9">Yuri Berry</td>
+                <td id="project9">Chief Marketing Officer (CMO)</td>
                 <td>
-                  <button onclick="update_el('Yuri Berry', 'Chief Marketing Officer (CMO)')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
+                  <button onclick="update_el('name9', 'project9')" data-toggle="modal" data-target="#ventana-modificar"><i class="fas fa-pencil-alt"></i></button>
                   <button onclick="show_el('Yuri Berry', 'Chief Marketing Officer (CMO)')" data-toggle="modal" data-target="#ventana-ver"><i class="fas fa-search"></i></button>
                   <button onclick="delete_el('tr9')"><i class="fas fa-trash-alt"></i></button>
                 </td>
@@ -158,16 +158,26 @@
       </div>
       <div class="modal-body">
         <div class="d-flex flex-column p-4 mb-5">
-            <div class="form-group">
-              <label for="send-name">Editar el nombre:</label>
-              <input type="text" id="modal-update-send-name" class="form-control" placeholder="Nuevo nombre" required />
-            </div>
-            <button class="btn btn-primary btn-sm" onclick="update_name_btn()">Enviar nombre</button>
-            <div class="form-group mt-5">
-              <label for="send-project">Editar el proyecto:</label>
-              <input type="text" id="modal-update-send-project" class="form-control" placeholder="Nuevo proyecto" required />
-            </div>
-            <button class="btn btn-primary btn-sm" onclick="update_project_btn()">Enviar proyecto</button>
+          <div>
+            <p class="fw-bolder">Element information:</p>
+            <p>
+              <b>Name id: </b>
+              <span id="span-edit-name"></span>
+              <br />
+              <b>Project id: </b>
+              <span id="span-edit-project"></span>
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="send-name">Editar el nombre:</label>
+            <input type="text" id="modal-update-send-name" class="form-control" placeholder="Nuevo nombre" required />
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="update_name_btn()">Enviar nombre</button>
+          <div class="form-group mt-5">
+            <label for="send-project">Editar el proyecto:</label>
+            <input type="text" id="modal-update-send-project" class="form-control" placeholder="Nuevo proyecto" required />
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="update_project_btn()">Enviar proyecto</button>
         </div>
       </div>
       <div class="modal-footer">
@@ -505,16 +515,20 @@ $(document).ready(function() {
 <script type="text/javascript">
   function update_el(name_el_id, project_el_id) {
     document.getElementById("modal-update-show-title").innerHTML = "Modificar";
+    document.getElementById("span-edit-name").innerHTML = name_el_id;
+    document.getElementById("span-edit-project").innerHTML = project_el_id;
   }
 
   function update_name_btn() {
     let name = document.getElementById("modal-update-send-name");
-    document.getElementById("name1").innerHTML = name.value;
+    let el_id = document.getElementById("span-edit-name").innerHTML;
+    document.getElementById(el_id).innerHTML = name.value;
   }
 
   function update_project_btn() {
     let project = document.getElementById("modal-update-send-project");
-    document.getElementById("project1").innerHTML = project.value;
+    let el_id = document.getElementById("span-edit-project").innerHTML;
+    document.getElementById(el_id).innerHTML = project.value;
   }
 
   function show_el(name, project) {
